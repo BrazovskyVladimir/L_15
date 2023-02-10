@@ -1,6 +1,0 @@
-name:hostnamectl
-sysinfo:uname -a
-mother:dmidecode -t 2
-blocks:lsblk
-hadrware:lshw -short
-memory:free
