@@ -1,0 +1,29 @@
+brazovsky@brazovsky-virtual-machine:/tmp/Lesson15$ export PATH="/tmp/Lesson15:$PATH"
+brazovsky@brazovsky-virtual-machine:/tmp/Lesson15$ 11.sh 
+Mike=175
+Christian=201
+Susan=50
+Archie=175
+Jody=150
+Guy=175
+Dan=275
+Nancy=75
+John=175
+Chet=135
+Tom=200
+Elizabeth=300
+
+brazovsky@brazovsky-virtual-machine:/tmp/Lesson15$ cd /etc/
+brazovsky@brazovsky-virtual-machine:/etc$ 11.sh 
+Mike=175
+Christian=201
+Susan=50
+Archie=175
+Jody=150
+Guy=175
+Dan=275
+Nancy=75
+John=175
+Chet=135
+Tom=200
+Elizabeth=300
