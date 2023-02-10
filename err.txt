@@ -1,0 +1,4 @@
+/sys/firmware/dmi/tables/smbios_entry_point: Permission denied
+/dev/mem: Permission denied
+WARNING: you should run this program as super-user.
+WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
