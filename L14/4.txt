@@ -1,0 +1,33 @@
+root@node2:~/bin# vi /etc/systemd/system/rsyncbackup.service
+
+[Unit]
+Description=BackUp
+Wants=rsyncbackup.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/backup-server1.sh
+
+[Install]
+WantedBy=multi-user.target
+
+root@node2:~/bin# systemctl start rsyncbackup.service
+root@node2:~/bin# systemctl enable rsyncbackup.service
+Created symlink /etc/systemd/system/multi-user.target.wants/rsyncbackup.service → /etc/systemd/system/rsyncbackup.service.
+
+root@node2:~/bin# vi /etc/systemd/system/rsyncbackup.timer
+
+[Unit]
+Description=BackUpTimer
+Requires=rsyncbackup.service
+
+[Timer]
+Unit=rsyncbackup.service
+OnCalendar=*-*-01 00:00:00
+
+[Install]
+WantedBy=timers.target
+
+root@node2:~/bin# systemctl start rsyncbackup.timer
+root@node2:~/bin# systemctl enable rsyncbackup.timer
+Created symlink /etc/systemd/system/timers.target.wants/rsyncbackup.timer → /etc/systemd/system/rsyncbackup.timer.

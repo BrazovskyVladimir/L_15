@@ -1,0 +1,43 @@
+brazovsky@brazovsky-virtual-machine:~/Desktop/DevOpsPr/NewHomeWork/DOS013-onl/Vladimir Brazovskiy/Lesson14$ awk -F ":" '{print $2}' source.txt | sed '2d'
+
+(510) 548-1278
+(408) 538-2358
+(206) 654-6279
+(206) 548-1348
+(206) 548-1278
+(916) 343-6410
+(406) 298-7744
+(206) 548-1278
+(916) 348-4278
+(510) 548-5258
+(408) 926-3456
+(916) 440-1763
+
+brazovsky@brazovsky-virtual-machine:~/Desktop/DevOpsPr/NewHomeWork/DOS013-onl/Vladimir Brazovskiy/Lesson14$ awk -F ":" '/Dan/ {print $2}' source.txt
+(406) 298-7744
+
+brazovsky@brazovsky-virtual-machine:~/Desktop/DevOpsPr/NewHomeWork/DOS013-onl/Vladimir Brazovskiy/Lesson14$ awk '/Susan/ {gsub(":"," ");print $1,$2,$3,$4}' source.txt
+Susan Dalsass (206) 654-6279
+
+brazovsky@brazovsky-virtual-machine:~/Desktop/DevOpsPr/NewHomeWork/DOS013-onl/Vladimir Brazovskiy/Lesson14$ awk '{gsub(":"," ");if ($2 ~ /^D/) print $2}' source.txt
+Dobbins
+Dalsass
+
+brazovsky@brazovsky-virtual-machine:~/Desktop/DevOpsPr/NewHomeWork/DOS013-onl/Vladimir Brazovskiy/Lesson14$ awk '/^C/||/^E/ {print $1}' source.txt
+Christian
+Chet
+Elizabeth
+
+brazovsky@brazovsky-virtual-machine:~/Desktop/DevOpsPr/NewHomeWork/DOS013-onl/Vladimir Brazovskiy/Lesson14$ awk 'FNR>1 {gsub(":"," ");if (length($1) == 4) print $1}' source.txt
+Mike
+Jody
+John
+Chet
+
+brazovsky@brazovsky-virtual-machine:~/Desktop/DevOpsPr/NewHomeWork/DOS013-onl/Vladimir Brazovskiy/Lesson14$ awk 'FNR>1 {gsub(":"," "); if ($3 == "(916)") print $1}' source.txt
+Guy
+John
+Elizabeth
+
+brazovsky@brazovsky-virtual-machine:~/Desktop/DevOpsPr/NewHomeWork/DOS013-onl/Vladimir Brazovskiy/Lesson14$ awk '{gsub(":"," ");if ($1 == "Mike") print "$"$5,"$"$6,"$"$7}' source.txt
+$250 $100 $175
