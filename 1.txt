@@ -1,0 +1,18 @@
+root@brazovsky-virtual-machine:/home/brazovsky/Desktop/DevOpsPr# lxc-info node2
+Name:           node2
+State:          RUNNING
+PID:            1573444
+IP:             10.0.3.98
+Link:           veth6xOJCQ
+ TX bytes:      44.57 KiB
+ RX bytes:      1.37 MiB
+ Total bytes:   1.42 MiB
+root@brazovsky-virtual-machine:/home/brazovsky/Desktop/DevOpsPr# lxc-info node1
+Name:           node1
+State:          RUNNING
+PID:            1573303
+IP:             10.0.3.204
+Link:           vethJ9UdRu
+ TX bytes:      48.78 KiB
+ RX bytes:      1.38 MiB
+ Total bytes:   1.42 MiB

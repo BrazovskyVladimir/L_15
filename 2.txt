@@ -1,0 +1,24 @@
+ubuntu@node1:~$ rsync --archive --verbose --progress /var/log/apt/ ubuntu@10.0.3.98:/home/ubuntu/backup_logs/ --exclude term.log
+sending incremental file list
+created directory /home/ubuntu/backup_logs
+./
+eipp.log.xz
+          9,776 100%    0.00kB/s    0:00:00 (xfr#1, to-chk=1/3)
+history.log
+          5,975 100%    5.70MB/s    0:00:00 (xfr#2, to-chk=0/3)
+
+sent 15,950 bytes  received 104 bytes  32,108.00 bytes/sec
+total size is 15,751  speedup is 0.98
+
+ubuntu@node1:~$ rsync --archive --verbose --progress ubuntu@10.0.3.98:/var/log/apt/ /home/ubuntu/backup_logs/ --exclude term.log
+receiving incremental file list
+created directory /home/ubuntu/backup_logs
+./
+eipp.log.xz
+          9,776 100%    9.32MB/s    0:00:00 (xfr#1, to-chk=1/3)
+history.log
+          5,975 100%    5.70MB/s    0:00:00 (xfr#2, to-chk=0/3)
+
+sent 79 bytes  received 15,951 bytes  10,686.67 bytes/sec
+total size is 15,751  speedup is 0.98
+
